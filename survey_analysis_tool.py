@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt\
+import datetime
+
 
 def load_excel():
     uploaded_file = st.file_uploader("Upload Excel file", type=["xlsx", "xls"])
@@ -137,6 +139,7 @@ def main():
                    y_max, font_size, fig_width, fig_height, all_categories)
 
 
+st.write("Last update:", datetime.datetime.now())
 
 if __name__ == "__main__":
     main()
